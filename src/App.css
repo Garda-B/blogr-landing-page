@@ -1,38 +1,684 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+
+  /* Primary */
+
+  --Light-red-CTA-text: hsl(356, 100%, 66%);
+  --Very-light-red-CTA-hover-background: hsl(355, 100%, 74%);
+  --Very-dark-blue-headings: hsl(208, 49%, 24%);
+
+  /*  Neutral */
+
+  --White-text: hsl(0, 0%, 100%);
+  --Grayish-blue-footer-text: hsl(240, 2%, 79%);
+  --Very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+  --Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+  /* Gradient */
+
+  /* Background-gradient-Intro-CTA-mobile-nav */
+
+  --Very-light-red: hsl(13, 100%, 72%);
+  --Light-red: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --Very-dark-gray-blue: hsl(237, 17%, 21%);
+  --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+html {
+  margin: 0;
+  font-family: Overpass;
+  color: var(--Very-dark-grayish-blue-body-copy);
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+
+  background-image: linear-gradient(to bottom, var(--Very-light-red), var(--Light-red));
+  border-bottom-left-radius: 90px;
+
+
+}
+
+.mobilenav {
+
+  padding: 3em 1.5em;
+  height: 40em;
+  margin: 0;
+  background: url(./images/bg-pattern-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 350%;
+  background-position: -21em -14em;
+  border-bottom-left-radius: 90px;
+
+}
+
+.uppertwo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 4.5em;
+  height: 1.7em;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hamburger {
+  width: 2em;
+  height: 1.2em;
+
+}
+
+.iconclosed {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+
+}
+
+ul {
+
+  padding: 0;
+  list-style: none;
+  font-weight: 700;
+}
+
+.arrow {
+  width: 0.5em;
+  height: 0.5em;
+
+}
+
+.arrowreversed {
+  transform: rotate(180deg);
+  width: 0.5em;
+  height: 0.5em;
+
+}
+
+.mobilemenu {
+  margin-top: 2.5em;
+  padding-top: 0.35em;
+  background-color: white;
+  text-align: center;
+  line-height: 3em;
+  border-radius: 4px;
+  box-shadow: 0 12px 12px rgb(105, 105, 105, 0.3);
+
+}
+
+.connectmenu {
+  background-color: var(--Grayish-blue-footer-text);
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 4px;
+
+}
+
+p {
+  margin: 0;
+
+}
+
+
+button {
+  background-image: linear-gradient(to right, var(--Very-light-red), var(--Light-red));
+  border: none;
+  font-family: inherit;
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  padding: .75em 2em;
+  margin-bottom: 2em;
+
+}
+
+.borderabove {
+  margin-top: 2em;
+  border-top: 1px solid lightgray;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.herotext {
+  text-align: center;
+  color: var(--White-text);
+  margin-top: 8em;
+}
+
+.herotext button:nth-of-type(1) {
+
+  background: var(--White-text);
+  color: var(--Light-red-CTA-text);
+  font-weight: 700;
+  font-family: Ubuntu;
+  padding: .85em 1em;
+  margin-right: 1em;
+  margin-top: 4em;
+  font-size: 1rem;
+  border-radius: 25px;
+
+}
+
+.herotext button:nth-of-type(2) {
+
+  background: rgba(0, 0, 0, 0);
+  color: var(--White-text);
+  font-weight: 700;
+  border: 1px solid white;
+  font-family: Ubuntu;
+  padding: .85em 1em;
+  min-width: 115px;
+  font-size: 1rem;
+  border-radius: 25px;
+
+}
+.herotext button:nth-of-type(2):hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--Very-light-red-CTA-hover-background);
+
+
+}
+
+
+h1 {
+
+  font-size: 2rem;
+}
+
+.displayblock {
+
+  display: block;
+}
+
+
+.bodycopy {
+
+  text-align: center;
+
+
+}
+
+.editormobile {
+  width: 95%;
+
+
+}
+
+.editordesktop {
+  display: none;
+
+}
+
+.sectionone {
+  padding-bottom: 2em;
+  padding-top: 4em;
+}
+
+.sectionone p {
+
+  padding: .7em 2em;
+
+}
+
+.sectiontwo {
+  margin-top: 10em;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+
+  color: var(--White-text);
+  background-color: var(--Very-dark-gray-blue);
+  position: relative;
+  padding-bottom: 4em;
+
+}
+
+.sectiontwotext {
+
+  padding-top: 10em;
+
+}
+
+.sectiontwotext p {
+
+  padding: .7em 2em;
+
+}
+
+.sectiontwo h2 {
+
+  font-size: 2rem;
+
+
+}
+
+
+.phones {
+  width: 90%;
+  position: absolute;
+  top: -30%;
+  left: 1em;
+  right: 0;
+  margin: auto;
+  max-width: 310px;
+}
+
+.bigcircle {
+
+  background-image: url(images/bg-pattern-circles.svg);
+  background-position: 0em -8em;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+.laptopmobile {
+  width: 100%;
+  margin-top: 2em;
+
+}
+
+.laptopdesktop {
+
+  display: none;
+}
+
+.footer {
+  border-top-right-radius: 70px;
+  background-color: var(--Very-dark-black-blue-footer-background);
+  color: var(--White-text);
+  padding-top: 4em;
+  margin-top: 4em;
+
+}
+
+.footer ul:last-child {
+  padding-bottom: 2em;
+  margin-bottom: 0;
+}
+
+.footer p {
+  margin-bottom: 1em;
+
+}
+
+.footer li {
+  font-weight: 300;
+  line-height: 1.75em;
+  color: var(--Grayish-blue-footer-text)
+}
+
+.footer ul {
+
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+}
+
+body p {
+  padding: .7em 1.5em;
+  line-height: 1.5em;
+
+}
+
+.desktophero {
+
+  display: none;
+}
+
+main {
+  display: none;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 736px) {
+
+  .mobilenav {
+    display: none;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .desktopnav {
+
+    display: flex;
+    gap: 1.5em;
+    font-family: Ubuntu;
+    font-weight: 300;
+    font-size: 12px;
+
   }
+
+  li span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    
+  }
+
+  footer li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+  }
+
+
+  .desktophero button {
+    height: 25%;
+  }
+
+  button {
+    background-image: none;
+    font-weight: 700;
+    font-family: Ubuntu;
+  }
+
+
+  .desktophero button:nth-of-type(1) {
+    margin-left: auto;
+    padding-right: 0.01px;
+    background-color: rgba(0, 0, 0, 0);
+
+  }
+
+
+  .desktophero button:nth-of-type(2) {
+    background-color: var(--White-text);
+    color: var(--Light-red-CTA-text)
+  }
+
+
+  .desktophero button:nth-of-type(2):hover {
+    cursor: pointer;
+    background-color: var(--Very-light-red-CTA-hover-background);
+    color: white;
+
+  }
+
+  .desktophero {
+
+    display: flex;
+    gap: 5%;
+    padding: 5% 10%;
+    padding-bottom: 0;
+    color: var(--White-text);
+
+  }
+
+  .herotext {
+    margin-top: 0;
+    padding-top: 2em;
+  }
+
+  .herotext h1 {
+    font-size: 4rem;
+    margin-bottom: .2em;
+    margin-top: 1em;
+  }
+
+
+  .desktoplogo {
+
+    height: 25%;
+    margin-right: 1.5em;
+  }
+
+  .hero {
+
+    background-image: linear-gradient(to right, var(--Very-light-red), var(--Light-red));
+  }
+
+  main {
+    background-image: url(images/bg-pattern-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 190em 190em;
+    background-position: -25em -80em;
+    display: block;
+
+  }
+
+  .herotext span {
+
+    display: inline-block;
+  }
+
+  .herotext button:nth-of-type(1) {
+
+    margin-top: 1.5em;
+    margin-bottom: 10em;
+
+  }
+
+  .herotext button:nth-of-type(1):hover {
+    cursor: pointer;
+    background-color: var(--Very-light-red-CTA-hover-background);
+    color: white;
+
+  }
+
+  h2 {
+
+    font-size: 2.5rem;
+    color: var(--Very-dark-blue-headings);
+  }
+
+
+
+  .editormobile {
+
+    display: none;
+  }
+
+
+
+
+  .sectionone {
+
+    padding-left: 5em;
+    position: relative;
+
+
+  }
+
+  .sectiononetext {
+
+    max-width: 45%;
+    text-align: left;
+    padding-left: 3%;
+
+  }
+
+  .sectiononetext h2 {
+    font-size: 2rem;
+
+  }
+
+  .sectiononeh2 {
+    margin-bottom: 3em;
+
+  }
+
+
+  .sectiononetext span {
+    display: inline-block;
+  }
+
+
+  .editordesktop {
+
+    display: block;
+
+
+
+    position: absolute;
+    left: 55%;
+    bottom: -15%;
+
+
+  }
+
+
+
+  .sectionone p {
+
+    padding: 0;
+    line-height: 2em;
+  }
+
+  .sectiononetext p:nth-of-type(1) {
+
+    margin-bottom: 5em;
+  }
+
+
+  .sectiontwo {
+
+    margin-top: 15em;
+    text-align: left;
+    padding: 0;
+
+
+  }
+
+  .sectiontwotext {
+
+    width: 50%;
+    margin: 0 50%;
+    padding: 0;
+    min-height: 25em;
+
+  }
+
+  .sectiontwo p {
+    padding: 0;
+    width: 75%;
+  }
+
+  .sectiontwo h2 {
+    color: white;
+    padding-top: 15%;
+  }
+
+
+  .phones {
+
+    left: -45%;
+    bottom: -8em;
+    max-width: 552px;
+    width: 40%;
+  }
+
+  .bigcircle {
+
+    background-image: none;
+
+  }
+
+  .bigcircledesktop {
+
+    background-image: url(images/bg-pattern-circles.svg);
+    background-position: -13em -30em;
+    background-repeat: no-repeat;
+
+  }
+
+  .laptopmobile {
+    display: none;
+
+  }
+
+
+  .sectionthree {
+
+    position: relative;
+    margin-top: 15em;
+    margin-bottom: 20em;
+
+  }
+
+  .laptopdesktop {
+    display: block;
+    position: absolute;
+    top: -10em;
+    left: -17em;
+    width:67.5%;
+  }
+
+
+  .sectionthreetext {
+    text-align: left;
+
+    margin-left: 50%;
+    padding-right: 5em;
+    padding-top: 1em;
+
+  }
+
+  .sectionthreetext h2 {
+
+    font-size: 2rem;
+
+  }
+
+  .sectionthree p {
+    padding: 0;
+    line-height: 1.8em;
+  }
+
+
+  .flex {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-right: 12em;
+
+  }
+
+  .footer ul {
+    margin-top: 0;
+  }
+
+  .footer p {
+    padding-left: 0;
+  }
+
+  .footer li {
+
+    line-height: 2.5em;
+  }
+
+.desktopdropdown {
+
+  position: absolute;
+  background-color: white;
+  padding:1.5em 1.5em;
+  padding-right: 3.5em;
+  text-align: left;
+  font-weight: 300;
+  line-height: 2em;
+  color: var(--Very-dark-grayish-blue-body-copy);
+  left: 26.5em;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 12px 12px rgb(105, 105, 105, 0.3);
+
+}
+
+.desktopdropdown li:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+
 }
